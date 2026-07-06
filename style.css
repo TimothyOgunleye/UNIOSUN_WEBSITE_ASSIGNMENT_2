@@ -1,0 +1,330 @@
+/*==========================================================
+    Osun State University, Osogbo, Nigeria
+    Post-UTME Application Portal
+==========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eef2f7;
+    color:#333;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    padding:35px;
+}
+
+/*=========================
+        HEADER
+=========================*/
+
+.header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.logo{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
+
+.header h1{
+    color:#003366;
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.header h2{
+    color:#006699;
+    margin-bottom:10px;
+}
+
+.header p{
+    color:#555;
+}
+
+/*=========================
+        CARD
+=========================*/
+
+.card{
+    background:#fafafa;
+    margin-top:30px;
+    padding:25px;
+    border-left:8px solid #003366;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:#003366;
+    margin-bottom:20px;
+}
+
+/*=========================
+        ROW
+=========================*/
+
+.row{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+
+.input-group{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+.full{
+    width:100%;
+}
+
+/*=========================
+        LABELS
+=========================*/
+
+label{
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#003366;
+}
+
+/*=========================
+    INPUT CONTROLS
+=========================*/
+
+input,
+select,
+textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+    background:#fff;
+    transition:.3s;
+}
+
+textarea{
+    resize:vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:#0066cc;
+    box-shadow:0 0 6px rgba(0,102,204,.4);
+}
+
+/*=========================
+        TABLE
+=========================*/
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+table th{
+    background:#003366;
+    color:#fff;
+    padding:12px;
+    border:1px solid #ddd;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:10px;
+}
+
+table input,
+table select{
+    width:100%;
+}
+
+/*=========================
+    INSTRUCTION
+=========================*/
+
+.instruction{
+    margin-bottom:15px;
+    color:#555;
+}
+
+/*=========================
+        BUTTONS
+=========================*/
+
+.buttons{
+    text-align:center;
+    margin-top:30px;
+}
+
+button{
+    padding:14px 25px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin:8px;
+    transition:.3s;
+}
+
+.addButton{
+    background:#2196F3;
+    color:white;
+}
+
+.addButton:hover{
+    background:#1565C0;
+}
+
+.submitButton{
+    background:#28a745;
+    color:white;
+}
+
+.submitButton:hover{
+    background:#1e7e34;
+}
+
+.printButton{
+    background:#ff9800;
+    color:white;
+}
+
+.printButton:hover{
+    background:#ef6c00;
+}
+
+.resetButton{
+    background:#dc3545;
+    color:white;
+}
+
+.resetButton:hover{
+    background:#b71c1c;
+}
+
+.deleteButton{
+    background:#c62828;
+    color:white;
+    padding:8px 12px;
+}
+
+.deleteButton:hover{
+    background:#8b0000;
+}
+
+/*=========================
+    PRINT AREA
+=========================*/
+
+#printArea{
+    display:none;
+    background:#fff;
+    padding:40px;
+}
+
+.printHeader{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.printLogo{
+    width:100px;
+    margin-bottom:15px;
+}
+
+.previewTable{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+}
+
+.previewTable th{
+    background:#003366;
+    color:white;
+    border:1px solid #555;
+    padding:10px;
+}
+
+.previewTable td{
+    border:1px solid #555;
+    padding:10px;
+}
+
+/*=========================
+    RESPONSIVE
+=========================*/
+
+@media(max-width:900px){
+
+.row{
+    flex-direction:column;
+}
+
+.container{
+    width:96%;
+    padding:20px;
+}
+
+.header h1{
+    font-size:28px;
+}
+
+.header h2{
+    font-size:22px;
+}
+
+button{
+    width:100%;
+}
+
+}
+
+/*=========================
+        PRINT
+=========================*/
+
+@media print{
+
+.container{
+    display:none;
+}
+
+#printArea{
+    display:block;
+}
+
+button{
+    display:none;
+}
+
+.logo{
+    display:none;
+}
+
+body{
+    background:white;
+}
+
+}
